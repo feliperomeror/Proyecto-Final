@@ -109,3 +109,65 @@ table(
   
 )
 
+# =========================================================
+# ACCURACY
+# =========================================================
+
+accuracy <- mean(
+  
+  data$potencia_mundial ==
+    data$Prediccion
+  
+)
+
+accuracy
+
+# =========================================================
+# RANKING DE PROBABILIDADES
+# =========================================================
+
+ranking_probabilidades <- data %>%
+  
+  select(
+    pais,
+    Probabilidad
+  ) %>%
+  
+  arrange(
+    desc(Probabilidad)
+  )
+
+ranking_probabilidades
+
+# =========================================================
+# TOP 10 FAVORITOS
+# =========================================================
+
+head(
+  ranking_probabilidades,
+  10
+)
+
+# =========================================================
+# GRÁFICO PROBABILIDADES
+# =========================================================
+
+top10 <- head(
+  ranking_probabilidades,
+  10
+)
+
+barplot(
+  
+  top10$Probabilidad,
+  
+  names.arg = top10$pais,
+  
+  las = 2,
+  
+  main = "Top 10 Selecciones con Mayor Probabilidad",
+  
+  ylab = "Probabilidad"
+  
+)
+
