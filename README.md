@@ -1,4 +1,4 @@
-# Caso Potencia Mundialista 2026 
+# Proyecto Potencia Mundialista 2026 
 
 Este repositorio contiene el desarrollo y la resolución del caso “Modelo Predictivo Potencia Mundialista 2026”, realizado en el marco del curso Analítica de los Negocios.
 Datos y archivos de réplica para el análisis del caso por:
